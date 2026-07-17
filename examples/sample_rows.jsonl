@@ -1,0 +1,21 @@
+{"battle_id": 12345, "event_id": 1001, "tick": 0, "attacker_hid": "H-0001", "attacker_faction": "Concord", "defender_hid": "H-0102", "defender_faction": "Reavers", "outcome": "hit"}
+{"battle_id": 12345, "event_id": 1002, "tick": 1, "attacker_hid": "H-0102", "attacker_faction": "Reavers", "defender_hid": "H-0001", "defender_faction": "Concord", "outcome": "miss"}
+{"battle_id": 12345, "event_id": 1003, "tick": 2, "attacker_hid": "H-0001", "attacker_faction": "Concord", "defender_hid": "H-0102", "defender_faction": "Reavers", "outcome": "crit"}
+{"battle_id": 12345, "event_id": 1004, "tick": 3, "attacker_hid": "H-0001", "attacker_faction": "Concord", "defender_hid": "H-0102", "defender_faction": "Reavers", "outcome": "kill"}
+{"battle_id": 12345, "event_id": 1005, "tick": 4, "attacker_hid": "H-0102", "attacker_faction": "Reavers", "defender_hid": "H-0001", "defender_faction": "Concord", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1101, "tick": 0, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Ashfall", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1102, "tick": 1, "attacker_hid": "H-0304", "attacker_faction": "Ashfall", "defender_hid": "H-0203", "defender_faction": "Cirran", "outcome": "miss"}
+{"battle_id": 12346, "event_id": 1103, "tick": 2, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Ashfall", "outcome": "obliterated"}
+{"battle_id": 12346, "event_id": 1104, "tick": 3, "attacker_hid": "H-12", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Ashfall", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1105, "tick": 4, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Vanguard", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1106, "tick": "5", "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Ashfall", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1107, "tick": -1, "attacker_hid": "H-0304", "attacker_faction": "Ashfall", "defender_hid": "H-0203", "defender_faction": "Cirran", "outcome": "miss"}
+{"battle_id": 12346, "event_id": 1108, "tick": 6, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_faction": "Ashfall", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1109, "tick": 7, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0203", "defender_faction": "Cirran", "outcome": "hit"}
+{"battle_id": 12346, "event_id": 1110, "tick": 8, "attacker_hid": "H-0203", "attacker_faction": "Cirran", "defender_hid": "H-0304", "defender_faction": "Ashfall", "outcome": "kill"}
+{"battle_id": 12347, "event_id": 1201, "tick": 0, "attacker_hid": "H-0005", "attacker_faction": "Concord", "defender_hid": "H-0007", "defender_faction": "Concord", "outcome": "hit"}
+{"battle_id": 12347, "event_id": 1202, "tick": 1, "attacker_hid": "H-0007", "attacker_faction": "Concord", "defender_hid": "H-0005", "defender_faction": "Concord", "outcome": "miss"}
+{"battle_id": 12348, "event_id": 1301, "tick": 0, "attacker_hid": "H-0110", "attacker_faction": "Reavers", "defender_hid": "H-0311", "defender_faction": "Ashfall", "outcome": "hit"}
+{"battle_id": 12348, "event_id": 1302, "tick": 1, "attacker_hid": "H-0311", "attacker_faction": "Ashfall", "defender_hid": "H-0110", "defender_faction": "Reavers", "outcome": "crit"}
+{"battle_id": 12348, "event_id": 1303, "tick": 2, "attacker_hid": "H-0110", "attacker_faction": "Reavers", "defender_hid": "H-0311", "defender_faction": "Ashfall", "outcome": "kill"}
+{"battle_id": 12349, "event_id": 1401, "tick": 0, "attacker_hid": "H-0
