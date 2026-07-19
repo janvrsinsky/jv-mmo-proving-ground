@@ -34,7 +34,7 @@ Meridian is invented. The setting, the factions, the ships, and every row of dat
 
 ## Demo
 
-https://github.com/user-attachments/assets/fb273ade-8862-4585-a6b7-1d2b1f9eacba
+https://github.com/user-attachments/assets/8fbdf648-029e-4575-bb36-c7fa255dfacf
 
 **What to watch:** the contract is the spine of every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it stands on, and refuses when the rows are not there. Nothing reaches the roster without a person approving it.
 
