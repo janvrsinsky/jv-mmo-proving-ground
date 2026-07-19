@@ -5,6 +5,8 @@
 
 **A contract-blind LLM drafts warships from a single sentence. A grounded assistant answers questions across 149,288,931 rows by citing the exact rows it stands on.** One typed contract judges every row that moves, on the way in and on the way back out. This is the data brain of a strategy MMO: AI that creates game data, and AI that reads it back at scale.
 
+**[▶ Watch the whole system run, end to end](#demo)** · two minutes, no narration: fragmented sources become one store of 149,288,931 rows, one sentence becomes a rule-legal warship, a legal-looking hull is refused for busting its tier budget, and the read engine answers by citing the rows it stands on.
+
 ![live LLM run](https://img.shields.io/badge/live%20LLM%20run-2026--07--17%20%C2%B7%20one%20pass-6e40c9)
 ![generate](https://img.shields.io/badge/generate-49%20briefs%20drafted%20contract--blind-b07bf7)
 ![retrieval](https://img.shields.io/badge/retrieval-grounded%20over%20149M%20rows%20%C2%B7%20cite--or--refuse-6e40c9)
@@ -29,6 +31,12 @@ Meridian is invented. The setting, the factions, the ships, and every row of dat
 
 ![Control Room: the whole system in one view, one contract and two AI seams over 149,288,931 rows](stills/control-room.jpg)
 <sub>One contract, two AI seams, over 149,288,931 rows. Generation and retrieval across one validated store, in a single console.</sub>
+
+## Demo
+
+https://github.com/user-attachments/assets/fb273ade-8862-4585-a6b7-1d2b1f9eacba
+
+**What to watch:** the contract is the spine of every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it stands on, and refuses when the rows are not there. Nothing reaches the roster without a person approving it.
 
 ## What this proves
 
