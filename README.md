@@ -1,42 +1,36 @@
-![MMO Airship Proving Ground](stills/00-title.jpg)
+[![Play the film: 1 minute 54, sound on](stills/00-title-play.jpg)](#film)
 
 # MMO Airship Proving Ground
 ### Generative and retrieval AI over vast game data
 
 **A contract-blind LLM drafts warships from a single sentence. A grounded assistant answers questions across 149,288,931 rows by citing the exact rows it stands on.** One typed contract judges every row that moves, on the way in and on the way back out. This is the data brain of a strategy MMO: AI that creates game data, and AI that reads it back at scale.
 
-**[▶ Watch the whole system run, end to end](#demo)** · two minutes, no narration: fragmented sources become one store of 149,288,931 rows, one sentence becomes a rule-legal warship, a legal-looking hull is refused for busting its tier budget, and the read engine answers by citing the rows it stands on.
+[![▶ WATCH THE FILM · 1:54 · SOUND ON](https://img.shields.io/badge/%E2%96%B6%C2%A0%C2%A0WATCH%20THE%20FILM-1%3A54%20%C2%B7%20SOUND%20ON-46cdda?style=for-the-badge&labelColor=161b22)](#film)
 
 ![live LLM run](https://img.shields.io/badge/live%20LLM%20run-2026--07--17%20%C2%B7%20one%20pass-6e40c9)
 ![generate](https://img.shields.io/badge/generate-49%20briefs%20drafted%20contract--blind-b07bf7)
 ![retrieval](https://img.shields.io/badge/retrieval-grounded%20over%20149M%20rows%20%C2%B7%20cite--or--refuse-6e40c9)
-![telemetry](https://img.shields.io/badge/telemetry-149%2C288%2C931%20rows%20loaded-1f6feb)
-![ingest](https://img.shields.io/badge/ingest-12%20shards%20%C2%B7%201M%20rows%2Fcommit-1f6feb)
-![quarantine](https://img.shields.io/badge/quarantine-153%2C600%20caught%20%C2%B7%200%20dropped-6aa84f)
-![postgres](https://img.shields.io/badge/Postgres-16%20in%20Docker-336791)
-![selective read](https://img.shields.io/badge/selective%20read-Index%20Only%20Scan%20%C2%B7%200%20heap%20fetches-2ea44f)
-![fast path](https://img.shields.io/badge/ingest%20fast%20path-11x%2C%20proven%20equivalent-2ea44f)
-![one contract](https://img.shields.io/badge/validation-one%20contract%2C%20in%20code-critical)
-![data](https://img.shields.io/badge/data-100%25%20synthetic-6aa84f)
-![python](https://img.shields.io/badge/python-3.11-3776AB)
-![ui](https://img.shields.io/badge/UI-Vue%203%20review%20console-42b883)
-![tools](https://img.shields.io/badge/tools-typed%20MCP-6e40c9)
-![eval](https://img.shields.io/badge/eval-two%20metrics%2C%20never%20blended-informational)
 
 Meridian is invented. The setting, the factions, the ships, and every row of data in this project are synthetic, generated end to end from one fixed seed. The engine that generates and validates them is private. What runs, and where, is named below.
 
 ---
 
+<a id="film"></a>
+## 🎬 The film
+
+**One minute fifty-four, end to end.** No narration and no slideware: the machine runs, the score carries it, and every screen in the frame is the live system.
+
+https://github.com/user-attachments/assets/8fbdf648-029e-4575-bb36-c7fa255dfacf
+
+> [!IMPORTANT]
+> 🔊 **Sound on.** The film carries its story in the score and the sound design. Headphones do it justice.
+
+**What to watch:** the contract is the spine of every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it stands on, and refuses when the rows are not there. Nothing reaches the roster without a person approving it.
+
 ## The system at a glance
 
 ![Control Room: the whole system in one view, one contract and two AI seams over 149,288,931 rows](stills/control-room.jpg)
 <sub>One contract, two AI seams, over 149,288,931 rows. Generation and retrieval across one validated store, in a single console.</sub>
-
-## Demo
-
-https://github.com/user-attachments/assets/8fbdf648-029e-4575-bb36-c7fa255dfacf
-
-**What to watch:** the contract is the spine of every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it stands on, and refuses when the rows are not there. Nothing reaches the roster without a person approving it.
 
 ## What this proves
 
@@ -55,6 +49,19 @@ On 2026-07-17, an LLM ran behind both seams for real, one pass, no retries, and 
 ## The receipts
 
 Every figure here was produced by the system on 15 to 17 July 2026, over data it generated itself.
+
+![telemetry](https://img.shields.io/badge/telemetry-149%2C288%2C931%20rows%20loaded-1f6feb)
+![ingest](https://img.shields.io/badge/ingest-12%20shards%20%C2%B7%201M%20rows%2Fcommit-1f6feb)
+![quarantine](https://img.shields.io/badge/quarantine-153%2C600%20caught%20%C2%B7%200%20dropped-6aa84f)
+![postgres](https://img.shields.io/badge/Postgres-16%20in%20Docker-336791)
+![selective read](https://img.shields.io/badge/selective%20read-Index%20Only%20Scan%20%C2%B7%200%20heap%20fetches-2ea44f)
+![fast path](https://img.shields.io/badge/ingest%20fast%20path-11x%2C%20proven%20equivalent-2ea44f)
+![one contract](https://img.shields.io/badge/validation-one%20contract%2C%20in%20code-critical)
+![data](https://img.shields.io/badge/data-100%25%20synthetic-6aa84f)
+![python](https://img.shields.io/badge/python-3.11-3776AB)
+![ui](https://img.shields.io/badge/UI-Vue%203%20review%20console-42b883)
+![tools](https://img.shields.io/badge/tools-typed%20MCP-6e40c9)
+![eval](https://img.shields.io/badge/eval-two%20metrics%2C%20never%20blended-informational)
 
 **Creation, live.** An LLM drafted a warship for each of 49 frozen briefs in one pass, called through a headless CLI, given only the sentence and the public card shape, never a band, a budget, or a role rule. It read every brief correctly: 49 of 49 on all four structured axes (class, tier, rarity, faction), 0 unparseable responses. Against the hidden balance envelope it went 1 of 49 rule-legal (brief-003, "Cirran Vigil Ascendant"), and the same `validate` battery that guards ingest blocked the other 48, each with its reason. That split is the architecture working exactly as designed: a model that understands every brief still cannot hit an envelope it was never shown, and the contract is what decides. Median call 15.6 s, prompt template sha `0936e6e4`.
 
