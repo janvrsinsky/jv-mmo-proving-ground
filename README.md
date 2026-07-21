@@ -3,7 +3,7 @@
 # MMO Airship Proving Ground
 ### Generative and retrieval AI over vast game data
 
-**A contract-blind LLM drafts warships from a single sentence. A grounded assistant answers questions across 149,288,931 rows by citing the exact rows it stands on.** One typed contract judges every row that moves, on the way in and on the way back out. This is the data brain of a strategy MMO: AI that creates game data, and AI that reads it back at scale.
+**This is the data platform of an invented strategy MMO: AI that creates game data, and AI that reads it back at scale.** An LLM drafts warships from a single sentence, and a grounded assistant answers questions across 149,288,931 rows, citing the exact rows behind every answer. One typed data contract validates every record, on ingest and on generation.
 
 [![▶ WATCH THE FILM · 1:54 · SOUND ON](https://img.shields.io/badge/%E2%96%B6%C2%A0%C2%A0WATCH%20THE%20FILM-1%3A54%20%C2%B7%20SOUND%20ON-46cdda?style=for-the-badge&labelColor=161b22)](#film)
 
@@ -27,28 +27,28 @@ https://github.com/user-attachments/assets/8fbdf648-029e-4575-bb36-c7fa255dfacf
 > [!IMPORTANT]
 > 🔊 **Sound on.** The film carries its story in the score and the sound design. Headphones do it justice.
 
-**What to watch:** the contract is the spine of every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it stands on, and refuses when the rows are not there. Nothing reaches the roster without a person approving it.
+**What to watch:** one data contract runs through every scene. Fragmented sources reconcile into one store and the telemetry odometer settles at 149,288,931 rows. A single sentence goes into the foundry and comes back as a hull the validator accepts, drafted by a model that never saw the rules it is judged against. The next hull is legal on every individual stat and still refused, because together they exceed its tier budget. The read engine answers by citing the row ids it used, and refuses when the rows are not there. Nothing goes live without a person approving it.
 
 ## The system at a glance
 
-![Control Room: the whole system in one view, one contract and two AI seams over 149,288,931 rows](stills/control-room.jpg)
-<sub>One contract, two AI seams, over 149,288,931 rows. Generation and retrieval across one validated store, in a single console.</sub>
+![Control Room: the whole system in one view, one contract with generation and retrieval over 149,288,931 rows](stills/control-room.jpg)
+<sub>One contract over 149,288,931 rows: generation and retrieval across one validated store, in a single console.</sub>
 
 ## What this proves
 
-Two AI capabilities that a modern game-data team actually needs, built on one spine and shown running live over real volume.
+Two AI capabilities that a modern game-data team actually needs, built on one shared data contract and shown running live over real volume.
 
-**Creation.** A model turns one plain-English sentence into a complete, rule-legal warship: stats, tier, faction, role, all of it. It drafts blind to the rules it will be graded against, so a good draft is a real result, not a rubber stamp.
+**Creation.** A model turns one plain-English sentence into a complete, rule-legal warship: stats, tier, faction, role, all of it. It drafts contract-blind, meaning it never sees the rules it will be graded against, so a good draft is a real result, not a rubber stamp.
 
-**Retrieval.** A grounded assistant answers questions over 149,288,931 rows of combat telemetry and a live roster, and every answer names the exact rows it came from or refuses out loud. No plausible guessing. The answer is only ever the data.
+**Retrieval.** A grounded assistant answers questions over 149,288,931 rows of combat telemetry and a live roster, and every answer names the exact rows it came from, or the assistant refuses explicitly. No plausible guessing: answers come only from the data.
 
-**Vast.** 149,288,931 rows landed in an indexed Postgres from 38,400,000 simulated battles, streamed in across 12 parallel shards, every row validated on the way in. Both AI seams run over that store, not a toy fixture.
+**Vast.** 149,288,931 rows landed in an indexed Postgres from 38,400,000 simulated battles, streamed in across 12 parallel shards, every row validated on the way in. Both generation and retrieval run over that store, not a toy fixture.
 
 **One contract underneath.** The same typed contract that validates a 149-million-row ingest also grades a model's proposal and shapes every query the assistant can ask. Creation and retrieval never drift apart on what "valid" means, because they call the same code.
 
-On 2026-07-17, an LLM ran behind both seams for real, one pass, no retries, and the receipts are below.
+On 2026-07-17, an LLM ran on both paths for real, one pass, no retries; the measured results are below.
 
-## The receipts
+## Measured results
 
 Every figure here was produced by the system on 15 to 17 July 2026, over data it generated itself.
 
@@ -73,10 +73,10 @@ Every figure here was produced by the system on 15 to 17 July 2026, over data it
 ![The accepted ship rendered as a place rather than a row](stills/hangar.jpg)
 <sub>The same ship, as a place instead of a row: H-9003 Cirran Vigil Ascendant, the one draft of 49 that cleared the envelope, on the pad.</sub>
 
-**Retrieval, live.** With the LLM engine on, an LLM planner and synthesis running over live Postgres, the committed gold set came back 20 of 20 grounded against a target of 18, every answer citing exactly the right row ids. The showcase exchange is one grounded aggregate over all 149,288,931 telemetry rows, counted at ask time: miss 680,194, hit 103,862,912, crit 6,354,465, kill 38,391,360, summing to exactly 149,288,931. Cite-or-refuse is enforced mechanically, in the filter algebra itself, so a question outside the allowlisted surface has no path to a made-up answer. Planner template sha `ff479742`, synthesis template sha `e0c50e43`.
+**Retrieval, live.** With the LLM engine on, an LLM planner and synthesis running over live Postgres, the committed gold set came back 20 of 20 grounded against a target of 18, every answer citing exactly the right row ids. The showcase exchange is one grounded aggregate over all 149,288,931 telemetry rows, counted at ask time: miss 680,194, hit 103,862,912, crit 6,354,465, kill 38,391,360, summing to exactly 149,288,931. Cite-or-refuse (every answer must cite its rows, or the system refuses) is enforced mechanically in the query layer, so a question outside the allowlisted surface has no path to a made-up answer. Planner template sha `ff479742`, synthesis template sha `e0c50e43`.
 
 ![The live read engine citing real row ids over 149,288,931 rows](stills/07-ask-grounded.jpg)
-<sub>The live read engine, an LLM behind typed tools. Every answer cites the rows it stands on, including the grounded aggregate over all 149,288,931 telemetry rows.</sub>
+<sub>The live read engine, an LLM behind typed tools. Every answer cites the rows it used, including the grounded aggregate over all 149,288,931 telemetry rows.</sub>
 
 **149 million rows, loaded clean.** From 38,400,000 simulated battles, 149,442,531 rows were generated across 12 parallel shards and 149,288,931 landed in the indexed table. 153,600 rows carried injected structural defects; every one was quarantined with the contract's exact reason code, not one silently dropped. Completeness 99.90%. The telemetry stream calls the same `validate` and lands in the same store as the ship roster: one contract, two wildly different datasets, no second engine.
 
@@ -97,11 +97,11 @@ Aggregate  (cost=405.53..405.54 rows=1 width=8) (actual time=0.103..0.104 rows=1
         Buffers: shared hit=8
 ```
 
-At volume the planner does the right thing on its own: a bulk rollup filtering roughly a quarter of the table runs as a parallel sequential scan, the correct plan, because an index over a quarter of a table earns nothing. The design is right at both ends of the selectivity curve.
+At volume the planner does the right thing on its own: a bulk rollup filtering roughly a quarter of the table runs as a parallel sequential scan, the correct plan, because an index does not help when a quarter of the table qualifies. The design is right at both ends of the selectivity curve.
 
-**The fast path is the slow path, proven.** Validating 149 million rows through a per-row model instance is the obvious bottleneck. The fix was a fast structural validator, proven row-for-row equivalent to the full contract on a 234,017-row sample, zero mismatches across both the clean and the quarantine partitions, and the rare malformed rows still come back carrying the contract's own reason codes. That equivalence bought roughly 11x on the ingest path with the validation guarantee fully intact. 149,288,931 is an honest number because the equivalence was run before the number was quoted.
+**The fast validator is proven equivalent to the full contract.** Validating 149 million rows through a per-row model instance is the obvious bottleneck. The fix was a fast structural validator, proven row-for-row equivalent to the full contract on a 234,017-row sample, zero mismatches across both the clean and the quarantine partitions, and the rare malformed rows still come back carrying the contract's own reason codes. That equivalence made the ingest path roughly 11x faster with the validation guarantee fully intact. The equivalence check ran first; the 149,288,931 row count was only claimed after it passed.
 
-**The balance model predicts the simulation.** Over 600,000 simulated battles and 2,333,277 loaded telemetry rows, all nine class-matchup cells land within 2 points of prediction, zero cells flagged. These are not one computation checked against itself: the prediction is the deterministic pricing physics, the observed rate is derived from simulated races carrying variance the price cannot see, and agreement across all nine cells is a genuine cross-check of pricing against emergent outcome. The estimators behind that block are pinned by a committed golden hash, so any drift in their math fails the suite loudly.
+**The balance model predicts the simulation.** Over 600,000 simulated battles and 2,333,277 loaded telemetry rows, all nine class-matchup cells land within 2 points of prediction, zero cells flagged. These are not one computation checked against itself: the prediction comes from the deterministic cost model, the observed rate is derived from simulated races carrying variance that model cannot see, and agreement across all nine cells is a genuine cross-check of the cost model against emergent outcome. The estimators behind that block are pinned by a committed checksum, so any drift in their math fails the test suite.
 
 ![The class matchup rendered as a 3D dominance surface](stills/tier-surface.jpg)
 <sub>The class matchup as terrain: gentle peaks where a class beats its prey, a basin at the mixed equilibrium, every rise capped inside a designed corridor. No runaway, no dead pick.</sub>
@@ -111,8 +111,8 @@ At volume the planner does the right thing on its own: a bulk rollup filtering r
 
 **The validator catches 9 of 9 injected defects, each for the exact right reason, with 0 false alarms across 25 clean controls.** Recomputed live on every run, never read from a cache. The 25 negative controls are what make it a measurement rather than a validator that simply rejects everything, and two of them sit at the exact boundary of legal.
 
-![The receipts wall: 9 of 9 defects caught, 48 of 49 proposals blocked, and 20 of 20 answers grounded, all measured on the live run](stills/06-receipts.jpg)
-<sub>The receipts, measured live: 9 of 9 defects caught, 48 of 49 proposals blocked, 20 of 20 answers grounded.</sub>
+![The results wall: 9 of 9 defects caught, 48 of 49 proposals blocked, and 20 of 20 answers grounded, all measured on the live run](stills/06-receipts.jpg)
+<sub>Measured on the live run: 9 of 9 defects caught, 48 of 49 proposals blocked, 20 of 20 answers grounded.</sub>
 
 **Every artifact regenerates from one seed.** The balance sheet hashes to a committed checksum, asserted three ways: the generator is byte-deterministic, its output matches the hash, and the file on disk equals what the generator emits. A re-tune is a deliberate act, never an accident.
 
@@ -120,22 +120,22 @@ At volume the planner does the right thing on its own: a bulk rollup filtering r
 
 **Two metrics, never blended.** The eval reports the model and the code separately, and the report object refuses to collapse them into a single number. One score is about the AI, one is about the engineering, and averaging two things with different owners is exactly the move this harness is built to reject. Strict type checking is clean across the tree and both test suites are green.
 
-Correctness at volume, not benchmark theatre: the scale claims are about plan shape and honest validation at 149 million rows, and the live-run wall clocks are provenance that the run was real.
+The point is correctness at volume, not benchmark numbers: the scale claims are about query plan shape and honest validation at 149 million rows, and the live-run wall clocks are provenance that the run was real.
 
 ## What actually runs
 
 The moving parts, named, because a repo that shows you results owes you the machine that produced them.
 
-- **Postgres 16, in Docker, as the source of truth.** Two data tables (a mutable roster upserted on its natural key, an append-only combat telemetry stream) plus two honesty tables: `quarantine` for structurally malformed rows ingest refused, `drift_flag` for loaded-but-drifting rows. Every index exists to serve a query the read side actually issues.
+- **Postgres 16, in Docker, as the source of truth.** Two data tables (a mutable roster upserted on its natural key, an append-only combat telemetry stream) plus two data-integrity tables: `quarantine` for structurally malformed rows ingest refused, `drift_flag` for loaded-but-drifting rows. Every index exists to serve a query the read side actually issues.
 - **A streaming ingest path that filled it.** 12 parallel shards, each a disjoint battle range, concurrent COPY batched at 1,000,000 rows per commit. The stream is never materialized, so memory stays constant no matter how far the row count goes.
 - **A FastAPI service** exposing the same typed functions the tool surface calls over MCP: a whitelist of columns and operators, a parameterized predicate, an audit entry per call, and a refusal with a reason code for anything outside the surface.
 - **A real MCP server**, built on the official SDK, registering three read tools with typed input schemas and a column allowlist checked at the edge. No write tool exists to call.
-- **A grounded assistant with a live LLM engine.** A deterministic router over three typed question shapes ships as the default, and behind the same protocol seam a live LLM planner and synthesis engine, opt-in via `ASSISTANT_ENGINE=llm` and exercised for real on 2026-07-17. Either engine answers from rows it actually read or returns a `cannot_express` refusal, because cite-or-refuse is enforced in the query layer, outside anything that could decide to be generous.
+- **A grounded assistant with a live LLM engine.** A deterministic router over three typed question shapes ships as the default, and behind the same protocol boundary a live LLM planner and synthesis engine, opt-in via `ASSISTANT_ENGINE=llm` and exercised for real on 2026-07-17. Either engine answers from rows it actually read or returns a `cannot_express` refusal, because cite-or-refuse is enforced in the query layer, outside the model's control.
 - **A Vue 3 review interface** over the typed API: the agent surface only reads, and the one write in the whole system is a human clicking approve.
 - **A seeded simulator** running battles at volume, so the balance model can be checked against outcomes instead of trusted.
 - **An eval harness**, frozen at a tag, reporting two labeled metrics that never blend.
 
-This is the data layer an MMO stands on, built as its own system: no players, no sessions, no live service, on purpose. It is the layer where the interesting failures live: fragmented sources that disagree, a unit that is legal on every axis and still broken, a proposal that no single rule catches.
+This is the data layer of an MMO, built as its own system: no players, no sessions, no live service, on purpose. It is the layer where the interesting failures live: fragmented sources that disagree, a unit that is legal on every axis and still broken, a proposal that no single rule catches.
 
 ## What it is
 
@@ -143,20 +143,20 @@ A game-data system with two halves that share one contract.
 
 The **read** half takes deliberately fragmented sources that disagree with each other, validates every row against a typed contract, and lands them in the indexed store that becomes the only source of truth. Structural defects are quarantined with a named reason code. Balance defects are a different severity: they load, stay queryable, and raise a drift flag, because a number that is legal but wrong is a design conversation, not a parse error.
 
-The **generate** half is the headline. A designer types one sentence. The system parses it into constraints, prices a proposal against the balance model, and runs it through the same contract the ingest path uses, plus a dominance lint and a simulation screen. A rule ledger shows every check, and the proposal lands in a staging queue.
+The **generate** half is the headline capability. A designer types one sentence. The system parses it into constraints, computes the proposal's cost against the balance model, and runs it through the same contract the ingest path uses, plus a dominance lint and a simulation screen. A rule ledger shows every check, and the proposal lands in a staging queue.
 
 ![The staging queue: the one rule-legal proposal of the run, awaiting a human decision](stills/staging-queue.jpg)
 <sub>The staging queue on the live run: 49 drafted, 48 blocked by the contract, 1 rule-legal and queued. The gate is automatic; the last call is a person's.</sub>
 
-**The model is the swappable part, and that is the design, not a gap.** The proposer is deliberately blind to the contract: it drafts from the public design model and never from the validator's rules, so a draft is graded by `validate` rather than passed by construction. The read side routes questions through a planner protocol. Both seams exist so a model drops in behind the same gate without the gate changing, and on 2026-07-17 that stopped being a promise: an LLM ran behind both seams, opt-in (`MERIDIAN_LLM_PROPOSER=1`, `ASSISTANT_ENGINE=llm`), one pass. The default build stays deterministic and model-free, so CI never depends on a model.
+**The model is the swappable part, and that is the design, not a gap.** The proposer is deliberately blind to the contract: it drafts from the public design model and never from the validator's rules, so a draft is graded by `validate` rather than passed by construction. The read side routes questions through a planner protocol. Both interfaces exist so a model drops in behind the same gate without the gate changing, and on 2026-07-17 an LLM actually ran behind both, opt-in (`MERIDIAN_LLM_PROPOSER=1`, `ASSISTANT_ENGINE=llm`), one pass. The default build stays deterministic and model-free, so CI never depends on a model.
 
-That ordering is the whole argument. Getting a model to invent an airship is the easy half, and it already works everywhere. The hard half is the machinery that prices the airship in one currency, catches it when it is legal on paper and dead on arrival in play, and reads it back correctly across 149 million rows. That machinery is what got built, and it is what those rows went through.
+That ordering is the whole argument. Getting a model to invent an airship is the easy half, and it already works everywhere. The hard half is the machinery that scores the airship against one cost model, catches it when it is legal on paper and dead on arrival in play, and reads it back correctly across 149 million rows. That machinery is what got built, and it is what those rows went through.
 
 ## How it works
 
 The architecture is a short list of design decisions, each one frozen before the domain that would have bent it existed.
 
-**One engine, and it names no game.** The core package is domain-free by construction. No game noun appears in any identifier or any branch, so the vocabulary can only live in data files. That is what let the same contract path carry a second, wildly different dataset, combat telemetry at 149 million rows, without touching the engine.
+**One engine, with no game-specific code.** The core package is domain-free by construction. No game noun appears in any identifier or any branch, so the vocabulary can only live in data files. That is what let the same contract path carry a second, wildly different dataset, combat telemetry at 149 million rows, without touching the engine.
 
 **One contract, two policies, keyed on severity.** Ingest and generate call the same `validate`. Ingest quarantines what fails; generate blocks it. The severity table decides which, so the two paths can never drift apart on what valid means. A validator that agrees with itself is the cheapest correctness property in the system and the one most demos skip.
 
@@ -168,21 +168,21 @@ The architecture is a short list of design decisions, each one frozen before the
 ![Eight checks green and one red: the per-stat bands pass while the tier budget rejects](stills/04-catch-over-budget.jpg)
 <sub>Eight green, one red. Every stat legal on its own axis, the total still rejected. This is what a real balance failure looks like.</sub>
 
-**Legal is not the same as good, so the simulator gets a vote.** A rule-legal proposal can still be a trap pick: smaller or equal on every axis than a cheaper ship already on the roster, so nobody would field it. A dominance lint catches it in effect space and a simulation catches it in play.
+**Legal is not the same as good, so the simulator screens every proposal.** A rule-legal proposal can still be a trap pick: smaller or equal on every axis than a cheaper ship already on the roster, so nobody would field it. A dominance lint catches it in effect space and a simulation catches it in play.
 
 ![A rule-legal proposal that a cheaper ship weakly dominates, caught by the simulator](stills/05-judge-trap-pick.jpg)
 <sub>Rule-legal, and still a trap pick: a cheaper ship does the same job. The lint and the simulator build the case.</sub>
 
-**The proposer is blind to the judge.** Whatever drafts a stat card, the seeded stand-in by default or an LLM on the 2026-07-17 live run, never sees the validator's bands, budget, or role rules. It drafts from the design model and gets graded afterwards. A generator that can read the rules it will be scored against passes by construction and teaches you nothing about whether the rules work. The live run is the cleanest demonstration here: the model extracted all four structured axes from 49 of 49 sentences and still went 1 for 49 against the envelope it was never shown.
+**The proposer never sees the validator.** Whatever drafts a stat card, the seeded stand-in by default or an LLM on the 2026-07-17 live run, never sees the validator's bands, budget, or role rules. It drafts from the design model and gets graded afterwards. A generator that can read the rules it will be scored against passes by construction and teaches you nothing about whether the rules work. The live run is the cleanest demonstration here: the model extracted all four structured axes from 49 of 49 sentences and still went 1 for 49 against the envelope it was never shown.
 
 **Grounded or refused, never approximated.** Answers come from rows or they do not come. A query that cannot be expressed against the allowlist returns a refusal with a reason code, not a plausible guess. The filter algebra composes a parameterized predicate from a whitelist of columns and operators, so a question outside that surface has no path to an answer. The refusal is structural, and it held with a model in the loop: on the live run the LLM engine, graded by the same mechanical cite-or-refuse, went 20 of 20 grounded over live Postgres.
 
 ![The live read engine citing real row ids over 149,288,931 rows, and refusing what it cannot express](stills/07-ask-grounded.jpg)
 <sub>The live read engine, an LLM behind typed tools, citing the rows behind every answer including the aggregate over all 149,288,931 telemetry rows.</sub>
 
-**One rollup, two backends.** The in-memory store filters in Python; Postgres composes the identical predicate into parameterized SQL and rides an index. A caller never learns which one it holds. Values ride as bind parameters and never touch the SQL text, so the composer that was frozen at the tag is the one executing against real SQL at 149 million rows.
+**One rollup, two backends.** The in-memory store filters in Python; Postgres composes the identical predicate into parameterized SQL and uses an index. A caller never learns which one it holds. Values are passed as bind parameters and never enter the SQL text, so the composer that was frozen at the tag is the one executing against real SQL at 149 million rows.
 
-**A gate that survives the model.** Approval from a human is one path into the roster, and the red and green on screen are reserved for validator verdicts and nothing else, so someone watching with the sound off cannot misread a warning as a bug. It is the part of the design that still has to exist after a model arrives, and on 2026-07-17 one did, behind both seams, without the gate changing.
+**An approval gate that does not depend on the model.** Approval from a human is one path into the roster, and the red and green on screen are reserved for validator verdicts and nothing else, so someone watching with the sound off cannot misread a warning as a bug. It is the part of the design that still has to exist after a model arrives, and on 2026-07-17 one did, behind both interfaces, without the gate changing.
 
 ![Simplex showing every start converging to a mixed meta rather than one dominant class](stills/08-no-dead-picks.jpg)
 <sub>What the roster is for: every start converges to a mixed meta, so no class dies and no class rules. Nash entropy 0.906, dominance gate green.</sub>
@@ -207,7 +207,7 @@ flowchart TB
     C -->|"balance defect"| DRIFT["Loads, stays queryable,<br/>raises a drift flag"]
     DRIFT --> DB
 
-    AI["Proposer, blind to the contract<br/>an LLM ran at this seam, opt-in"] --> C2{"The same contract"}
+    AI["Proposer, blind to the contract<br/>an LLM ran at this interface, opt-in"] --> C2{"The same contract"}
     C2 -.->|"rule-illegal"| BLOCK["Blocked, with the reason"]
     C2 -->|"rule-legal"| SCREEN["Rule ledger · dominance lint · simulation screen"]
     SCREEN --> STAGE["Staging queue"]
@@ -331,7 +331,7 @@ The design is the product, and it is mine: the invariants, the two-tier severity
 
 **Tier: Lab.** A working, measured system, held at lab status because the calibration is the private part. It is built on the same shape as the rest of the portfolio: typed, allowlisted tools instead of raw access, a guardrail in code rather than in a prompt, and a human on anything that changes state.
 
-**Generative and retrieval AI over vast game data.** Drafted by a model, read back at scale, judged by one contract.
+**Generative and retrieval AI over vast game data.** Drafted by a model, read back at scale, validated by one contract.
 
 Part of a portfolio of production and lab AI systems. More at **[github.com/janvrsinsky](https://github.com/janvrsinsky)**.
 
