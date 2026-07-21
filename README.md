@@ -22,6 +22,8 @@ Meridian is invented. The setting, the factions, the ships, and every row of dat
 
 https://github.com/user-attachments/assets/8fbdf648-029e-4575-bb36-c7fa255dfacf
 
+<sub>📱 The GitHub mobile app shows a bare link instead of the player above. If that is you, **[watch the direct MP4](https://github.com/janvrsinsky/jv-mmo-proving-ground/releases/download/film/proving-ground-film.mp4)** (1:54, 24 MB).</sub>
+
 > [!IMPORTANT]
 > 🔊 **Sound on.** The film carries its story in the score and the sound design. Headphones do it justice.
 
