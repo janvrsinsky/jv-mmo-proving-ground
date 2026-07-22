@@ -221,7 +221,7 @@ flowchart TB
 
 ## Run the contract shape yourself
 
-The two-tier severity model is the load-bearing idea in the whole system, and it is small enough to hand over outright.
+The two-tier severity model is the core idea in the whole system, and it is small enough to hand over outright.
 
 ```bash
 python3 examples/ingest_contract_concept.py
